@@ -9,15 +9,11 @@ export const metadata = {
 };
 
 import React from "react";
-import ThemeWrap from "./context/ThemeContext";
-export default function RootLayout({ children }) {
-  const theme = React.useContext;
 
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <ThemeWrap>
-        <body className={"theme"}>{children}</body>
-      </ThemeWrap>
+      <body className={"theme"}>{children}</body>
     </html>
   );
 }
