@@ -12,7 +12,7 @@ import React from "react";
 import ThemeWrap from "./context/ThemeContext";
 export default function RootLayout({ children }) {
   const theme = React.useContext;
-
+  console.log("conole.log in devtools")
   return (
     <html lang="en">
       <ThemeWrap>
