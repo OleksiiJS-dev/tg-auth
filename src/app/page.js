@@ -2,10 +2,24 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
-import React from "react";
 import { useState } from "react";
+import ReactButton from "./components/Button";
+import SideBar from "./components/SideBar";
+import ThemeProvider from "./context/ThemeContext";
+import { LogContextProvider } from "./context/LogContext";
 
 export default function Home() {
-  const context = React.useContext();
-  return <main className={styles.main}>Tg puth, {context}</main>;
+  const [theme, setTheme] = useState("light");
+
+  return (
+    <LogContextProvider>
+      <ThemeProvider.Provider value={[theme, setTheme]}>
+        <main className={styles.main}>
+          Tg logings
+          <ReactButton />
+          <SideBar />
+        </main>
+      </ThemeProvider.Provider>
+    </LogContextProvider>
+  );
 }
