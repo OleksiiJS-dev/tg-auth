@@ -7,6 +7,7 @@ import ReactButton from "./components/Button";
 import SideBar from "./components/SideBar";
 import ThemeProvider from "./context/ThemeContext";
 import { LogContextProvider } from "./context/LogContext";
+import {Menu} from './components/Menu';
 
 export default function Home() {
   const [theme, setTheme] = useState("light");
@@ -18,6 +19,7 @@ export default function Home() {
           Tg logings
           <ReactButton />
           <SideBar />
+          <Menu />
         </main>
       </ThemeProvider.Provider>
     </LogContextProvider>
