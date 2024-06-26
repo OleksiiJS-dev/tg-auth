@@ -1,9 +1,16 @@
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
-import {Link} from 'next/link';
-const Wallet = () => {
-    return <AccountBalanceWalletIcon fontSize={small}></AccountBalanceWalletIcon>
-}
+import { Link } from 'next/link';
 
-export const Menu = () => {
-    return <Link><Wallet /> </ Link>
+import Wallet from "./Menu/Wallet"
+
+
+export function Menu() {
+    return (
+        <>
+            <Wallet linkTo={"wallet"} ></Wallet>
+            <Wallet linkTo={"wallet"} ></Wallet>
+            <Wallet linkTo={"wallet"} ></Wallet>
+            <Wallet linkTo={"wallet"} ></Wallet>
+        </>
+    )
 }
